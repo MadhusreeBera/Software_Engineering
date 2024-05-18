@@ -1,0 +1,118 @@
+<!-- <div class="row">
+  <div class="col-md-12">
+    <div class="well well-sm">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span class="glyphicon glyphicon-pencil"></span> Search iTunes
+     
+          </h3>
+        </div>
+        <div class="panel-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="inputSearch">Search iTunes</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputSearch"
+                ng-model="searchKeywords"
+                placeholder="Enter keywords to search for iTunes podcasts"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              ng-click="searchPodcasts()"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span class="glyphicon glyphicon-pencil"></span> Search Results
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="row" ng-show="searchResults">
+            <div class="col-md-12">
+              <div class="well well-sm">
+                <h3>Search Results</h3>
+                <div ng-bind-html="searchResults"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="well well-sm">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span class="glyphicon glyphicon-pencil"></span> Search iTunes
+            Podcasts
+          </h3>
+        </div>
+        <div class="panel-body">
+          <form role="form" ng-submit="searchQuery()">
+            <div class="form-group">
+              <label for="inputSearch">Search iTunes Podcasts</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputSearch"
+                ng-model="searchKeywords"
+                placeholder="Enter keywords to search for iTunes podcasts"
+              />
+            </div>
+            <div class="form-group">
+              <label for="searchType">Select Search Type:</label>
+              <select
+                class="form-control"
+                id="searchType"
+                ng-model="searchType"
+              >
+                <option value="podcast">Podcast</option>
+                <option value="audiobook">Audiobook</option>
+              </select>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              ng-click="searchPodcasts()"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span class="glyphicon glyphicon-pencil"></span> Search Results
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="row" ng-show="searchResults">
+            <div class="col-md-12">
+              <div class="well well-sm">
+                <h3>Search Results</h3>
+                <div ng-bind-html="searchResults"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
